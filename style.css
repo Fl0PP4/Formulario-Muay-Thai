@@ -1,0 +1,138 @@
+/* ==================== RESET E BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #111111;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #1f1f1f, #2a2a2a);
+    padding: 30px 40px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    color: #ffcc00;
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Conteúdo */
+.content {
+    padding: 40px;
+}
+
+h2 {
+    color: #ffcc00;
+    font-size: 1.35rem;
+    margin: 32px 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #333;
+    font-weight: 500;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: #1a1a1a;
+    border: 2px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.15);
+    background: #222;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    margin-top: 35px;
+    padding: 16px;
+    background: #ffcc00;
+    color: #111;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: #ffe033;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+}
+
+/* Info */
+.info {
+    text-align: center;
+    margin-top: 25px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .content {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mensagens de erro */
+input.error, select.error {
+    border-color: #ff4444 !important;
+    background: #2a1a1a;
+}
