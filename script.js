@@ -1,4 +1,4 @@
-// ==================== FUNÇÕES DE VALIDAÇÃO ====================
+
 
 function validarCPF(cpf) {
     cpf = cpf.replace(/\D/g, '');
@@ -28,7 +28,7 @@ function validarTelefone(tel) {
     return numero.length === 11;
 }
 
-// ==================== BUSCA DE CEP (ViaCEP API) ====================
+
 
 async function buscarCEP(cep) {
     const cepLimpo = cep.replace(/\D/g, '');
@@ -64,7 +64,7 @@ async function buscarCEP(cep) {
     }
 }
 
-// ==================== EVENTOS ====================
+
 
 document.getElementById('cadastroForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -85,7 +85,7 @@ document.getElementById('cadastroForm').addEventListener('submit', function(e) {
     console.log('Cadastro completo enviado!');
 });
 
-// Formatação em tempo real
+
 document.getElementById('telefone').addEventListener('input', function() {
     let v = this.value.replace(/\D/g, '').substring(0, 11);
     if (v.length > 10) {
@@ -103,7 +103,7 @@ document.getElementById('cep').addEventListener('input', function() {
     this.value = this.value.replace(/\D/g, '').substring(0, 8);
 });
 
-// Busca automática de CEP (ao sair do campo)
+
 document.getElementById('cep').addEventListener('blur', function() {
     buscarCEP(this.value);
 });
